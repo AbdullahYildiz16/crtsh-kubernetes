@@ -18,7 +18,13 @@ prometheusRules:
 prometheus:
   scrapeInterval: 300s
   scrapeTimeout: 100s
-  
+
+  name: prometheus-kube-prometheus-prometheus
+  namespace: monitoring
+
+  serviceMonitorSelector:
+    matchLabels:
+      release: prometheus
 
 replicaCount: 1
 
