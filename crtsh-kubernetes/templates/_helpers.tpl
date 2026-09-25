@@ -61,3 +61,7 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{- define "crtsh-kubernetes-service-monitor.labels" -}}
+{{ .Values.prometheus.serviceMonitorSelector.matchLabels }}
+{{- end }}
