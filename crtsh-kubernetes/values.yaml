@@ -19,6 +19,9 @@ prometheus:
   scrapeInterval: 300s
   scrapeTimeout: 100s
   
+  serviceMonitorSelector:
+    matchLabels:
+      release: prometheus
 
 replicaCount: 1
 
