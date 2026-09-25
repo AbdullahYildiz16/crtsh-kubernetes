@@ -63,5 +63,5 @@ Create the name of the service account to use
 {{- end }}
 
 {{- define "crtsh-kubernetes-service-monitor.labels" -}}
-{{ .Values.prometheus.serviceMonitorSelector.matchLabels }}
+{{ toYaml .Values.prometheus.serviceMonitorSelector.matchLabels }}
 {{- end }}
